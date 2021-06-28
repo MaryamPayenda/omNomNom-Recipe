@@ -1,11 +1,22 @@
 import React from "react";
 
-const Recipe = () => {
-  let API_link =
-    "https://developer.edamam.com/edamam-docs-recipe-api#!/Recipe_Search/get_api_recipes_v2";
-  let App_ID = "1b14ca3f";
-  let API_KEY = "d8fd4b9340a8fb07b62b35013de596c4";
-  return <div></div>;
+
+const Recipe = ({ title, calories, cuisine, image, ingredients }) => {
+  return (
+    <div>
+      <h1>{title}</h1>
+      <img src={image} alt="recipe-image" />
+      <h3>Cuisine Type {cuisine}</h3>
+      <h3>Calories : {calories}</h3>
+      <h3>Ingredients:</h3>
+      <ol>
+        {ingredients.map((ingredient, i) => (
+          <li key={i}>{ingredient.text}</li>
+        ))}
+      </ol>
+    </div>
+  );
+
 };
 
 export default Recipe;
