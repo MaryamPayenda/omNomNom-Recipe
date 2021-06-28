@@ -1,0 +1,19 @@
+.navBar__container {
+  border: 2px goldenrod dotted;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  nav {
+    border: 2px tan dotted;
+    display: flex;
+    justify-content: space-around;
+    width: 28rem;
+  }
+  li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+  }
+}

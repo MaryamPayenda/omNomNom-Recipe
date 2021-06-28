@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <div className="navBar__container">
-      <div className="navLogo"></div>
+    <header className="navBar__container">
+      <div className="navLogo">
+        <img src="./img/omNomNom.png"></img>
+      </div>
       <div className="navBar">
-        <ul>
+        <nav>
           <Link to="/">
             <li>HOMEPAGE</li>
           </Link>
@@ -16,12 +18,9 @@ const Nav = () => {
           <Link to="/About">
             <li>ABOUT US</li>
           </Link>
-          <Link to="/Contact">
-            <li>CONTACT US</li>
-          </Link>
-        </ul>
+        </nav>
       </div>
-    </div>
+    </header>
   );
 };
 
