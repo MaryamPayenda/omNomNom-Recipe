@@ -13,12 +13,12 @@ const App = () => {
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState("Italian");
+  const [query, setQuery] = useState();
 
   useEffect(async () => {
     const getRecipes = async () => {
       const response = await fetch(
-        `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
+        `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=20`
       );
       const data = await response.json();
       console.log(data.hits);
