@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Recipe = ({ title, calories, cuisine, image, ingredients }) => {
   return (
     <div>
@@ -15,6 +16,7 @@ const Recipe = ({ title, calories, cuisine, image, ingredients }) => {
       </ol>
     </div>
   );
+
 };
 
 export default Recipe;
