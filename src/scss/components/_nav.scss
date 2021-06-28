@@ -4,9 +4,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 4rem;
+  height: 6rem;
+  background-color: $onn2;
   nav {
-    border: 2px tan dotted;
+    // border: 2px tan dotted;
     display: flex;
     justify-content: space-around;
     width: 28rem;
@@ -16,4 +17,13 @@
     display: flex;
     justify-content: space-around;
   }
+  .navLogo {
+    // border: 2px teal dotted;
+    width: 8rem;
+    padding-left: 3rem;
+    // height: 9rem;
+  }
+}
+#logoImg {
+  width: 10rem;
 }
