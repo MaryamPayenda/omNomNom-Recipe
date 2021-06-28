@@ -1,4 +1,9 @@
 
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Nav from "./components/Nav";
+import Home from "./components/Home";
+import Footer from "./components/Footer";
 import React, { useState, useEffect } from "react";
 import Recipe from "./components/Recipe";
 //import Search from "./components/Search";
@@ -36,7 +41,14 @@ const App = () => {
   };
 
   return (
+   
     <div>
+     <Router>
+      <Nav />
+      
+      <Switch></Switch>
+    </Router>
+    <Footer />
       {/* <Search /> */}
       <form className="search-form" onSubmit={getSearch}>
         <input
@@ -65,6 +77,7 @@ const App = () => {
     </div>
   );
 };
+
 
 
 export default App;
