@@ -1,5 +1,3 @@
-
-
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
@@ -7,7 +5,7 @@ import Footer from "./components/Footer";
 import React, { useState, useEffect } from "react";
 import Recipe from "./components/Recipe";
 //import Search from "./components/Search";
-// import SearchResult from "./components/SearchResult";
+//import SearchResult from "./components/SearchResult";
 
 const App = () => {
   const APP_ID = "271b281a";
@@ -41,43 +39,42 @@ const App = () => {
   };
 
   return (
-   
-    <div>
-     <Router>
-      <Nav />
-      
-      <Switch></Switch>
-    </Router>
-    <Footer />
-      {/* <Search /> */}
-      <form className="search-form" onSubmit={getSearch}>
-        <input
-          type="text"
-          className="search-bar"
-          value={search}
-          onChange={handleSearch}
-          placeholder="Search..."
-        />
-        <button type="submit" className="search-btn">
-          Search
-        </button>
-      </form>
-      <div className="container">
-        {recipes.map((recipe, index) => (
-          <Recipe
-            key={index}
-            title={recipe.recipe.label}
-            cuisine={recipe.recipe.cuisineType}
-            calories={recipe.recipe.calories}
-            image={recipe.recipe.image}
-            ingredients={recipe.recipe.ingredients}
+    <Router>
+      {" "}
+      <div>
+        <Nav />
+        <Switch></Switch>
+        {/* <Search /> */}
+        <form className="search-form" onSubmit={getSearch}>
+          <input
+            type="text"
+            className="search-bar"
+            value={search}
+            onChange={handleSearch}
+            placeholder="Search..."
           />
-        ))}
+          <button type="submit" className="search-btn">
+            Search
+          </button>
+        </form>
+        <div className="container">
+          {recipes.map((recipe, index) => (
+            <Recipe
+              key={index}
+              title={recipe.recipe.label}
+              cuisine={recipe.recipe.cuisineType}
+              calories={recipe.recipe.calories}
+              image={recipe.recipe.image}
+              ingredients={recipe.recipe.ingredients}
+            />
+          ))}
+        </div>{" "}
+        <footer>
+          <Footer />
+        </footer>
       </div>
-    </div>
+    </Router>
   );
 };
-
-
 
 export default App;
