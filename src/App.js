@@ -1,11 +1,9 @@
-
-
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import React, { useState, useEffect } from "react";
-import Recipe from "./components/Recipe";
+import Recipe from "./components/SearchResult";
 //import Search from "./components/Search";
 // import SearchResult from "./components/SearchResult";
 
@@ -15,7 +13,7 @@ const App = () => {
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState("Arabic");
+  const [query, setQuery] = useState("Italian");
 
   useEffect(async () => {
     const getRecipes = async () => {
@@ -41,14 +39,13 @@ const App = () => {
   };
 
   return (
-   
     <div>
-     <Router>
-      <Nav />
-      
-      <Switch></Switch>
-    </Router>
-    <Footer />
+      <Router>
+        <Nav />
+
+        <Switch></Switch>
+      </Router>
+
       {/* <Search /> */}
       <form className="search-form" onSubmit={getSearch}>
         <input
@@ -74,10 +71,9 @@ const App = () => {
           />
         ))}
       </div>
+      <Footer />
     </div>
   );
 };
-
-
 
 export default App;
