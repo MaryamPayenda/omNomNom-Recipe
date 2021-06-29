@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
+import About from "./components/About";
 import Footer from "./components/Footer";
 import React, { useState, useEffect } from "react";
 import Recipe from "./components/Recipe";
@@ -43,7 +44,11 @@ const App = () => {
       <Router>
         <Nav />
 
-        <Switch></Switch>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          {/* <Route path="/Recipe" exact component={Recipe} /> */}
+          <Route path="/About" exact component={About} />
+        </Switch>
       </Router>
       {/* <Search /> */}
       <form className="search-form" onSubmit={getSearch}>
