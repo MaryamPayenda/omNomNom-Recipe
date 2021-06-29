@@ -1,16 +1,7 @@
 // import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const SearchResult = ({
-  title,
-  calories,
-  cuisine,
-  image,
-  ingredients,
-  pagination,
-  setPagination,
-  id,
-}) => {
+const SearchResult = ({ title, image, id }) => {
   // console.log(id, title, calories);
 
   return (

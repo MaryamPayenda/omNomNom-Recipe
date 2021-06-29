@@ -9,6 +9,7 @@ const Recipe = () => {
   const location = useLocation();
   const { id } = location.state;
   console.log(id);
+  console.log("state", location.state);
   useEffect(() => {
     const getRecipe = async () => {
       const response = await fetch(
@@ -26,8 +27,13 @@ const Recipe = () => {
   console.log(dataObj);
   return (
     <div>
+      <p>{dataObj.calories}</p>
       <ul>
-        {dataObj ? dataObj.ingredients.map((item) => <li>{item.text}</li>) : ""}
+        {dataObj
+          ? dataObj.ingredients.map((item, i) => (
+              <li>{`${item.foodCategory}-${item.text}`}</li>
+            ))
+          : ""}
       </ul>
     </div>
   );

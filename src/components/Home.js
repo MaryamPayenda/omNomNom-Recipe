@@ -67,6 +67,7 @@ const Home = () => {
       </form>
       <div className="container">
         {pagination}
+        {console.log(recipes)}
         {recipes.map(({ recipe, i }) => (
           <SearchResult
             pagination={pagination}
