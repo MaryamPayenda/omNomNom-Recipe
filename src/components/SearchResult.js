@@ -1,7 +1,7 @@
 // import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const SearchResult = ({ title, image, id }) => {
+const SearchResult = ({ title, image, id, calories }) => {
   // console.log(id, title, calories);
 
   return (
