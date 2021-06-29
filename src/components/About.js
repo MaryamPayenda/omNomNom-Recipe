@@ -1,8 +1,6 @@
 import React from "react";
 
 const About = () => {
-
-
   return (
     <div className="about">
       <h2>About us</h2>
@@ -12,19 +10,17 @@ const About = () => {
       </p>
       <h3>Credits</h3>
       <p>
-        We used:{" "}
+        We used:
         <ul>
-          <li>API: edama api (link)</li>
+          <li>
+            API: <a href="https://www.edamam.com/">EDAMAM API</a>
+          </li>
           <li>Fonts: Open Sans & Mistrully (links)</li>
         </ul>
         Open Sans (link)
       </p>
     </div>
   );
-
-  
-
-
 };
 
 export default About;
