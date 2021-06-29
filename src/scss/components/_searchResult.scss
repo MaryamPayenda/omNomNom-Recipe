@@ -12,8 +12,13 @@
 // }
 
 .searchResult {
+  @include flex-column;
   width: 25vw;
+}
+.flexStart {
+  @include flex-column;
 }
 a {
   text-decoration: none;
+  // text-align: center;
 }

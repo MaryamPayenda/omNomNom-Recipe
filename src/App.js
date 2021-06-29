@@ -93,9 +93,9 @@ const App = () => {
       </div>
       <h1>Get inspired...</h1>
       <div className="container">
-        <p className="prev" onClick={prevClick}>
+        <i className="prev" onClick={prevClick}>
           <RiArrowDropLeftLine />
-        </p>
+        </i>
         {/* {pagination} */}
         {recipes.map(({ recipe, i }) => (
           <SearchResult
@@ -109,9 +109,9 @@ const App = () => {
             ingredients={recipe.ingredients}
           />
         ))}
-        <p className="next" onClick={nextClick}>
+        <i className="next" onClick={nextClick}>
           <RiArrowDropRightLine />
-        </p>
+        </i>
       </div>
       {/* <button type="submit" className="search-btn">
         Search

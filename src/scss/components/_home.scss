@@ -1,4 +1,14 @@
+.main {
+  @include flex-column;
+}
 .container {
   @include flex-column;
-  width: 100vw;
+  width: 80vw;
+}
+i {
+  justify-self: center;
+  font-size: 5rem;
+  color: $onn2;
+  width: 5vw;
+  text-align: center;
 }

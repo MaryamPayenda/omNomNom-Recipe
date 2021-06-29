@@ -1,11 +1,11 @@
 .navBar__container {
-  border: 2px goldenrod dotted;
-
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 6rem;
-  background-color: $onn2;
+  height: 8rem;
+  // background-color: $onn2;
+  border-bottom: 0.1rem solid $onn2;
   nav {
     // border: 2px tan dotted;
     display: flex;

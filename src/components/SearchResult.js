@@ -20,8 +20,8 @@ const SearchResult = ({
   // };
 
   return (
-    <div className="x">
-      <div className="searchResult">
+    <div className="searchResult">
+      <div className="flexStart">
         {/* shouldn't the click on the image open the recipe site? */}
         <a href={image} target="_blank">
           <img src={image} alt="recipe-image" />
