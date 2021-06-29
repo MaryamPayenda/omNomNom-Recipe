@@ -2,9 +2,11 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
+
 import React, { useState, useEffect, useRef } from "react";
 import Recipe from "./components/SearchResult";
 import SearchResult from "./components/SearchResult";
+
 
 const App = () => {
   const APP_ID = "271b281a";
@@ -57,11 +59,13 @@ const App = () => {
   };
 
   return (
+
     <div>
       <Router>
         <Nav />
 
-        <Switch></Switch>
+        <Switch>
+    </Switch>
       </Router>
       <form className="search-form" onSubmit={getSearch}>
         <input
@@ -87,11 +91,34 @@ const App = () => {
             calories={recipe.calories}
             image={recipe.image}
             ingredients={recipe.ingredients}
+
           />
-        ))}
+          <button type="submit" className="search-btn">
+            Search
+          </button>
+        </form>
+        <div className="container">
+          {recipes.map((recipe, index) => (
+            <Recipe
+              key={index}
+              title={recipe.recipe.label}
+              cuisine={recipe.recipe.cuisineType}
+              calories={recipe.recipe.calories}
+              image={recipe.recipe.image}
+              ingredients={recipe.recipe.ingredients}
+            />
+          ))}
+        </div>{" "}
+        <footer>
+          <Footer />
+        </footer>
       </div>
+
+    
+
       <Footer />
     </div>
+
   );
 };
 

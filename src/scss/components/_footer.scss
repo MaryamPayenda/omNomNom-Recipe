@@ -1,0 +1,7 @@
+footer {
+  @include flex-column;
+  margin: 1rem;
+  .footer-container {
+    @include flex-column;
+  }
+}

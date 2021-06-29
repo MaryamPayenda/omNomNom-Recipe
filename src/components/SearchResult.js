@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const SearchResult = ({
   title,
   calories,
@@ -18,6 +19,7 @@ const SearchResult = ({
   const nextClick = () => {
     setPagination(pagination + 10);
   };
+
 
   return (
     <div>
