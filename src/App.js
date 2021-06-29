@@ -1,5 +1,3 @@
-
-
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
@@ -41,14 +39,12 @@ const App = () => {
   };
 
   return (
-   
     <div>
-     <Router>
-      <Nav />
-      
-      <Switch></Switch>
-    </Router>
-    <Footer />
+      <Router>
+        <Nav />
+
+        <Switch></Switch>
+      </Router>
       {/* <Search /> */}
       <form className="search-form" onSubmit={getSearch}>
         <input
@@ -74,10 +70,9 @@ const App = () => {
           />
         ))}
       </div>
+      <Footer />{" "}
     </div>
   );
 };
-
-
 
 export default App;
