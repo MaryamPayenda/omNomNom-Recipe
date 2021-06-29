@@ -2,10 +2,11 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
-import React, { useState, useEffect } from "react";
-import Recipe from "./components/Recipe";
-//import Search from "./components/Search";
-//import SearchResult from "./components/SearchResult";
+
+import React, { useState, useEffect, useRef } from "react";
+import Recipe from "./components/SearchResult";
+import SearchResult from "./components/SearchResult";
+
 
 const App = () => {
   const APP_ID = "271b281a";
@@ -13,20 +14,39 @@ const App = () => {
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState("Arabic");
+  const [query, setQuery] = useState();
+  const [pagination, setPagination] = useState(0);
 
-  useEffect(async () => {
+  // useref
+  const prevSearchIdRef = useRef();
+  useEffect(() => {
+    prevSearchIdRef.current = search;
+  });
+  const prevSearch = prevSearchIdRef.current;
+
+  // calling API
+
+  useEffect(() => {
     const getRecipes = async () => {
+      var currentPagination = pagination;
+
+      if (prevSearch !== search) {
+        currentPagination = 0;
+        setPagination(0);
+      }
       const response = await fetch(
-        `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
+        `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&from=${currentPagination}&to=${
+          currentPagination + 10
+        }`
       );
       const data = await response.json();
-      console.log(data.hits);
       setRecipes(data.hits);
+
+      // console.log(data.hits);
     };
 
     getRecipes();
-  }, [query]);
+  }, [query, pagination]);
 
   const handleSearch = (e) => {
     setSearch(e.target.value);
@@ -39,19 +59,39 @@ const App = () => {
   };
 
   return (
-    <Router>
-      {" "}
-      <div>
+
+    <div>
+      <Router>
         <Nav />
-        <Switch></Switch>
-        {/* <Search /> */}
-        <form className="search-form" onSubmit={getSearch}>
-          <input
-            type="text"
-            className="search-bar"
-            value={search}
-            onChange={handleSearch}
-            placeholder="Search..."
+
+        <Switch>
+    </Switch>
+      </Router>
+      <form className="search-form" onSubmit={getSearch}>
+        <input
+          type="text"
+          className="search-bar"
+          value={search}
+          onChange={handleSearch}
+          placeholder="Search..."
+        />
+        <button type="submit" className="search-btn">
+          Search
+        </button>
+      </form>
+      <div className="container">
+        {pagination}
+        {recipes.map(({ recipe, i }) => (
+          <SearchResult
+            pagination={pagination}
+            setPagination={setPagination}
+            key={i}
+            title={recipe.label}
+            cuisine={recipe.cuisineType}
+            calories={recipe.calories}
+            image={recipe.image}
+            ingredients={recipe.ingredients}
+
           />
           <button type="submit" className="search-btn">
             Search
@@ -73,7 +113,12 @@ const App = () => {
           <Footer />
         </footer>
       </div>
-    </Router>
+
+    
+
+      <Footer />
+    </div>
+
   );
 };
 
