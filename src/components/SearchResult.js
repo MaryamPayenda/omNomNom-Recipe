@@ -9,6 +9,7 @@ const SearchResult = ({
   pagination,
   setPagination,
 }) => {
+
   // const prevClick = () => {
   //   if (pagination === 0) {
   //     return;
@@ -34,6 +35,29 @@ const SearchResult = ({
       {/* <h3>Cuisine Type {cuisine}</h3>
         <h3>Calories : {Math.floor(calories)}kcal</h3> */}
       {/* <h3>Ingredients:</h3>
+
+  const prevClick = () => {
+    if (pagination === 0) {
+      return;
+    }
+    setPagination(pagination - 9);
+  };
+  const nextClick = () => {
+    setPagination(pagination + 9);
+  };
+
+  return (
+    <div>
+      <div>
+        <h1>{title}</h1>
+        <a href={image} target="_blank" onClick={cuisine}>
+          <img src={image} alt="recipe-image" />
+        </a>
+
+        <h3>Cuisine Type {cuisine}</h3>
+        <h3>Calories : {Math.floor(calories)}</h3>
+        <h3>Ingredients:</h3>
+
         <ol>
           {ingredients.map((ingredient, i) => (
             <li key={i}>{ingredient.text}</li>
