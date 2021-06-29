@@ -87,7 +87,6 @@ const Home = () => {
             <RiArrowDropLeftLine />
           </i>
           <div className="singleRecipe">
-            {" "}
             {recipes.map(({ recipe, i }) => (
               <SearchResult
                 pagination={pagination}

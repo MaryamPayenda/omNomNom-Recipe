@@ -4,15 +4,14 @@
 .container {
   @include flex-row;
   width: 80vw;
-  border: salmon dotted 2px;
 }
 .singleRecipe {
-  @include flex-row;
-  border: olive dotted 2px;
+  display: flex;
+  justify-content: space-between;
 }
 i {
   justify-self: center;
-  font-size: 5rem;
+  font-size: 8rem;
   color: $onn2;
   width: 5vw;
   text-align: center;

@@ -24,7 +24,7 @@ const Nav = () => {
             <Link to="/about">
               <li>ABOUT US</li>
             </Link>
-          </nav>
+          </nav>{" "}
         </div>
       </div>
     </header>

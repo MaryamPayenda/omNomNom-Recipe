@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const Recipe = ({ title, calories, cuisine, image, ingredients }) => {
   return (
     <React.Fragment>
@@ -18,8 +17,6 @@ const Recipe = ({ title, calories, cuisine, image, ingredients }) => {
       </div>
     </React.Fragment>
   );
-
-
 };
 
 export default Recipe;

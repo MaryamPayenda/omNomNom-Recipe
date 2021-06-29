@@ -35,3 +35,18 @@ header {
 #logoImg {
   width: 8rem;
 }
+.MobileNavigation {
+  display: none;
+}
+
+@media (max-width: 414px) {
+  header {
+    width: 100vw;
+    .navBar__container {
+      @include flex-box;
+    }
+  }
+  .navBar {
+    display: none;
+  }
+}
