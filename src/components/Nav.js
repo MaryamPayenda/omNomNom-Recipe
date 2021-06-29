@@ -13,8 +13,8 @@ const Nav = () => {
           <Link to="/">
             <li>HOMEPAGE</li>
           </Link>
-          <Link to="/recipe">
-            <li>RECIPES</li>
+          <Link to="/categories">
+            <li>CATEGORIES</li>
           </Link>
           <Link to="/about">
             <li>ABOUT US</li>

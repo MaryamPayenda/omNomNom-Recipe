@@ -1,9 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+import Nav from "./components/Nav";
 import Home from "./components/Home";
 import About from "./components/About";
 import Footer from "./components/Footer";
-import About from "./components/About";
 import Recipe from "./components/Recipe";
 // import SearchResult from "./components/Recipe";
 
@@ -12,13 +11,10 @@ import SearchResult from "./components/SearchResult";
 
 import { RiArrowDropRightLine, RiArrowDropLeftLine } from "react-icons/ri";
 
-
-
 const App = () => {
   return (
     <div>
       <Router>
-
         <Nav />
 
         <Switch>
@@ -27,8 +23,8 @@ const App = () => {
           <Route path="/about" exact component={About} />
         </Switch>
       </Router>
-   
-   <Footer />
+
+      <Footer />
     </div>
   );
 };
