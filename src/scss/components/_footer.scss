@@ -1,4 +1,7 @@
 footer {
+  h4 {
+    font-size: 0.8rem;
+  }
   @include flex-column;
   margin: 1rem;
   .footer-container {

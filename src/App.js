@@ -7,7 +7,6 @@ import React, { useState, useEffect, useRef } from "react";
 import Recipe from "./components/SearchResult";
 import SearchResult from "./components/SearchResult";
 
-
 const App = () => {
   const APP_ID = "271b281a";
   const APP_KEY = "88c627abf78667444cf4d804190f1b2c";
@@ -36,7 +35,7 @@ const App = () => {
       }
       const response = await fetch(
         `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&from=${currentPagination}&to=${
-          currentPagination + 10
+          currentPagination + 3
         }`
       );
       const data = await response.json();
@@ -58,14 +57,23 @@ const App = () => {
     setSearch("");
   };
 
-  return (
+  // Prev and Next buttons
+  const prevClick = () => {
+    if (pagination === 0) {
+      return;
+    }
+    setPagination(pagination - 3);
+  };
+  const nextClick = () => {
+    setPagination(pagination + 3);
+  };
 
+  return (
     <div>
       <Router>
         <Nav />
 
-        <Switch>
-    </Switch>
+        <Switch></Switch>
       </Router>
       <form className="search-form" onSubmit={getSearch}>
         <input
@@ -91,34 +99,32 @@ const App = () => {
             calories={recipe.calories}
             image={recipe.image}
             ingredients={recipe.ingredients}
-
           />
-          <button type="submit" className="search-btn">
-            Search
-          </button>
-        </form>
-        <div className="container">
-          {recipes.map((recipe, index) => (
-            <Recipe
-              key={index}
-              title={recipe.recipe.label}
-              cuisine={recipe.recipe.cuisineType}
-              calories={recipe.recipe.calories}
-              image={recipe.recipe.image}
-              ingredients={recipe.recipe.ingredients}
-            />
-          ))}
-        </div>{" "}
-        <footer>
-          <Footer />
-        </footer>
+        ))}
+        <div className="p-nButtons">
+          <p onClick={prevClick}>Prev</p>
+          <p onClick={nextClick}>Next</p>
+        </div>
       </div>
-
-    
-
-      <Footer />
+      {/* <button type="submit" className="search-btn">
+        Search
+      </button> */}
+      {/* <div className="container">
+        {recipes.map((recipe, index) => (
+          <Recipe
+            key={index}
+            title={recipe.recipe.label}
+            cuisine={recipe.recipe.cuisineType}
+            calories={recipe.recipe.calories}
+            image={recipe.recipe.image}
+            ingredients={recipe.recipe.ingredients}
+          />
+        ))}
+      </div> */}
+      <footer>
+        <Footer />
+      </footer>
     </div>
-
   );
 };
 

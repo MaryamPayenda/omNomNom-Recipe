@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const SearchResult = ({
   title,
   calories,
@@ -10,16 +9,15 @@ const SearchResult = ({
   pagination,
   setPagination,
 }) => {
-  const prevClick = () => {
-    if (pagination === 0) {
-      return;
-    }
-    setPagination(pagination - 10);
-  };
-  const nextClick = () => {
-    setPagination(pagination + 10);
-  };
-
+  // const prevClick = () => {
+  //   if (pagination === 0) {
+  //     return;
+  //   }
+  //   setPagination(pagination - 10);
+  // };
+  // const nextClick = () => {
+  //   setPagination(pagination + 10);
+  // };
 
   return (
     <div>
@@ -37,8 +35,8 @@ const SearchResult = ({
           ))}
         </ol>
       </div>
-      <p onClick={prevClick}>Prev</p>
-      <p onClick={nextClick}>Next</p>
+      {/* <p onClick={prevClick}>Prev</p>
+      <p onClick={nextClick}>Next</p> */}
     </div>
   );
 };
