@@ -7,7 +7,7 @@ function Categories() {
     `https://api.edamam.com/search?q=meat&app_id=${APP_ID}&app_key=${APP_KEY}`
   );
   return (
-    <div className="Categories">
+    <div className="categories">
       <div className="meat">Meat</div>
       <div className="vegetarian">Vegetarian</div>
       <div className="vegan">Vegen</div>
