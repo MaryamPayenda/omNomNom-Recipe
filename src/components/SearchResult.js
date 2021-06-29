@@ -1,4 +1,5 @@
-import React from "react";
+// import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const SearchResult = ({
   title,
@@ -8,64 +9,28 @@ const SearchResult = ({
   ingredients,
   pagination,
   setPagination,
+  id,
 }) => {
-
-  // const prevClick = () => {
-  //   if (pagination === 0) {
-  //     return;
-  //   }
-  //   setPagination(pagination - 10);
-  // };
-  // const nextClick = () => {
-  //   setPagination(pagination + 10);
-  // };
+  // console.log(id, title, calories);
 
   return (
     <div className="searchResult">
       <div className="flexStart">
         {/* shouldn't the click on the image open the recipe site? */}
-        <a href={image} target="_blank">
-          <img src={image} alt="recipe-image" />
-        </a>
+        <img src={image} alt="recipe-image" />
+        <h2>{title}</h2>
 
-        <a href="">
-          <h2>{title}</h2>
-        </a>
+        <Link
+          to={{
+            pathname: "/Recipe",
+            state: {
+              id: id,
+            },
+          }}
+        >
+          More Info
+        </Link>
       </div>
-      {/* <h3>Cuisine Type {cuisine}</h3>
-        <h3>Calories : {Math.floor(calories)}kcal</h3> */}
-      {/* <h3>Ingredients:</h3>
-
-  const prevClick = () => {
-    if (pagination === 0) {
-      return;
-    }
-    setPagination(pagination - 9);
-  };
-  const nextClick = () => {
-    setPagination(pagination + 9);
-  };
-
-  return (
-    <div>
-      <div>
-        <h1>{title}</h1>
-        <a href={image} target="_blank" onClick={cuisine}>
-          <img src={image} alt="recipe-image" />
-        </a>
-
-        <h3>Cuisine Type {cuisine}</h3>
-        <h3>Calories : {Math.floor(calories)}</h3>
-        <h3>Ingredients:</h3>
-
-        <ol>
-          {ingredients.map((ingredient, i) => (
-            <li key={i}>{ingredient.text}</li>
-          ))}
-        </ol> */}
-
-      {/* <p onClick={prevClick}>Prev</p>
-      <p onClick={nextClick}>Next</p> */}
     </div>
   );
 };

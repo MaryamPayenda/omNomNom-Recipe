@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+import Nav from "./components/Nav";
 import Home from "./components/Home";
 import About from "./components/About";
 import Footer from "./components/Footer";
-import About from "./components/About";
+
 import Recipe from "./components/Recipe";
 // import SearchResult from "./components/Recipe";
 
@@ -20,7 +20,7 @@ const App = () => {
 
         <Switch>
           <Route path="/" exact component={Home} />
-          {/* <Route path="/Recipe" exact component={Recipe} /> */}
+          <Route path="/Recipe" exact component={Recipe} />
           <Route path="/About" exact component={About} />
         </Switch>
       </Router>
