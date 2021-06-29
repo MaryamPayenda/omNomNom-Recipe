@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import SearchResult from "./SearchResult";
-
+import { RiArrowDropRightLine, RiArrowDropLeftLine } from "react-icons/ri";
 const Home = () => {
   const APP_ID = "271b281a";
   const APP_KEY = "88c627abf78667444cf4d804190f1b2c";
@@ -29,7 +29,7 @@ const Home = () => {
       }
       const response = await fetch(
         `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&from=${currentPagination}&to=${
-          currentPagination + 9
+          currentPagination + 3
         }`
       );
       const data = await response.json();
@@ -51,22 +51,40 @@ const Home = () => {
     setSearch("");
   };
 
+  // Prev + Next Buttons
+  const prevClick = () => {
+    if (pagination === 0) {
+      return;
+    }
+    setPagination(pagination - 9);
+  };
+  const nextClick = () => {
+    setPagination(pagination + 9);
+  };
+
   return (
     <React.Fragment>
-      <form className="search-form" onSubmit={getSearch}>
-        <input
-          type="text"
-          className="search-bar"
-          value={search}
-          onChange={handleSearch}
-          placeholder="Search..."
-        />
-        <button type="submit" className="search-btn">
-          Search
-        </button>
-      </form>
+      <div className="search">
+        {" "}
+        <form className="search-form" onSubmit={getSearch}>
+          <input
+            type="text"
+            className="search-bar"
+            value={search}
+            onChange={handleSearch}
+            placeholder="Search..."
+          />
+          <button type="submit" className="search-btn">
+            Search
+          </button>
+        </form>
+      </div>
+
       <div className="container">
-        {pagination}
+        {/* {pagination}      */}
+        <i onClick={prevClick}>
+          <RiArrowDropLeftLine />
+        </i>
         {recipes.map(({ recipe, i }) => (
           <SearchResult
             pagination={pagination}
@@ -79,6 +97,10 @@ const Home = () => {
             ingredients={recipe.ingredients}
           />
         ))}
+
+        <i onClick={nextClick}>
+          <RiArrowDropRightLine />
+        </i>
       </div>
     </React.Fragment>
   );

@@ -3,32 +3,32 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Footer from "./components/Footer";
-import About from "./components/About";
+import Nav from "./components/Nav";
 import Recipe from "./components/Recipe";
-// import SearchResult from "./components/Recipe";
 
 import React, { useState, useEffect, useRef } from "react";
 import SearchResult from "./components/SearchResult";
-
-import { RiArrowDropRightLine, RiArrowDropLeftLine } from "react-icons/ri";
-
-
+import WrongTurn from "./components/WrongTurn";
 
 const App = () => {
   return (
     <div>
       <Router>
-
         <Nav />
 
         <Switch>
           <Route path="/" exact component={Home} />
           {/* <Route path="/Recipe" exact component={Recipe} /> */}
-          <Route path="/About" exact component={About} />
+          <Route path="/about" component={About} />
+          <Route path={() => "/main" || "/admin" || "/any-other-word"}>
+            <WrongTurn />
+          </Route>
         </Switch>
       </Router>
-   
-   <Footer />
+      <footer>
+        {" "}
+        <Footer />
+      </footer>
     </div>
   );
 };
