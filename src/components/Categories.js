@@ -1,4 +1,4 @@
-import axios from "axios";
+import Axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -11,7 +11,8 @@ function Categories() {
     https://api.edamam.com/search?q=vegetarian&app_id=${APP_ID}&app_key=${APP_KEY}`;
   const url_vegan = `
     https://api.edamam.com/search?q=vegan&app_id=${APP_ID}&app_key=${APP_KEY}`;
-  const meat = await axios.get(url_meat);
+  const meat = async () => await Axios.get(url_meat);
+  console.log(meat);
   return (
     <div className="categories">
       <Link to={meat}>
