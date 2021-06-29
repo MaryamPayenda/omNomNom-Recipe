@@ -1,8 +1,9 @@
 import React from "react";
 
 const Recipe = () => {
-  return <div></div>;
+  const history = useHistory();
 
+  return <div></div>;
 };
 
 export default Recipe;
