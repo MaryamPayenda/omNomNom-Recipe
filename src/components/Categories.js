@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Categories() {
   const APP_ID = "271b281a";
@@ -8,9 +9,15 @@ function Categories() {
   );
   return (
     <div className="categories">
-      <div className="meat">Meat</div>
-      <div className="vegetarian">Vegetarian</div>
-      <div className="vegan">Vegen</div>
+      <Link to={meat}>
+        <div className="meat">Meat</div>
+      </Link>
+      <Link>
+        <div className="vegetarian">Vegetarian</div>
+      </Link>
+      <Link>
+        <div className="vegan">Vegen</div>
+      </Link>
     </div>
   );
 }
