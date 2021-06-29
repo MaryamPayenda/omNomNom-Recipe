@@ -1,3 +1,16 @@
 .wrong {
   @include flex-column;
 }
+.rotatingPineapple {
+  @include flex-row;
+  font-size: 2rem;
+}
+.right {
+  transform: scaleX(-1);
+}
+
+.left,
+.right {
+  color: $onn4;
+  font-size: 4rem;
+}

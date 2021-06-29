@@ -2,17 +2,17 @@ import { GiPineapple } from "react-icons/gi";
 const WrongTurn = () => {
   return (
     <div className="wrong">
-      <p>
+      <div className="rotatingPineapple">
         {" "}
-        <i className="left">
+        <div className="left">
           <GiPineapple />
-        </i>
+        </div>
         Oh no!
-        <i className="right">
+        <div className="right">
           <GiPineapple />
-        </i>
-      </p>{" "}
-      It seems ou took a wrong turn somewhere...
+        </div>
+      </div>{" "}
+      You took a wrong turn somewhere...
     </div>
   );
 };

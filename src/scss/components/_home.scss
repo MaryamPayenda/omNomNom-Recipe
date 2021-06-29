@@ -2,8 +2,13 @@
   @include flex-column;
 }
 .container {
-  @include flex-column;
+  @include flex-row;
   width: 80vw;
+  border: salmon dotted 2px;
+}
+.singleRecipe {
+  @include flex-row;
+  border: olive dotted 2px;
 }
 i {
   justify-self: center;

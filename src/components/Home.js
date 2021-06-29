@@ -64,43 +64,48 @@ const Home = () => {
 
   return (
     <React.Fragment>
-      <div className="search">
+      <div className="main">
         {" "}
-        <form className="search-form" onSubmit={getSearch}>
-          <input
-            type="text"
-            className="search-bar"
-            value={search}
-            onChange={handleSearch}
-            placeholder="Search..."
-          />
-          <button type="submit" className="search-btn">
-            Search
-          </button>
-        </form>
-      </div>
+        <div className="search">
+          {" "}
+          <form className="search-form" onSubmit={getSearch}>
+            <input
+              type="text"
+              className="search-bar"
+              value={search}
+              onChange={handleSearch}
+              placeholder="Search..."
+            />
+            <button type="submit" className="search-btn">
+              Search
+            </button>
+          </form>
+        </div>
+        <div className="container">
+          {/* {pagination}      */}
+          <i onClick={prevClick}>
+            <RiArrowDropLeftLine />
+          </i>
+          <div className="singleRecipe">
+            {" "}
+            {recipes.map(({ recipe, i }) => (
+              <SearchResult
+                pagination={pagination}
+                setPagination={setPagination}
+                key={i}
+                title={recipe.label}
+                cuisine={recipe.cuisineType}
+                calories={recipe.calories}
+                image={recipe.image}
+                ingredients={recipe.ingredients}
+              />
+            ))}
+          </div>
 
-      <div className="container">
-        {/* {pagination}      */}
-        <i onClick={prevClick}>
-          <RiArrowDropLeftLine />
-        </i>
-        {recipes.map(({ recipe, i }) => (
-          <SearchResult
-            pagination={pagination}
-            setPagination={setPagination}
-            key={i}
-            title={recipe.label}
-            cuisine={recipe.cuisineType}
-            calories={recipe.calories}
-            image={recipe.image}
-            ingredients={recipe.ingredients}
-          />
-        ))}
-
-        <i onClick={nextClick}>
-          <RiArrowDropRightLine />
-        </i>
+          <i onClick={nextClick}>
+            <RiArrowDropRightLine />
+          </i>
+        </div>
       </div>
     </React.Fragment>
   );
