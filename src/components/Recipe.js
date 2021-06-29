@@ -26,20 +26,25 @@ const Recipe = () => {
 
   // console.log(dataObj);
   return (
-    <div>
-      <p>
-        <span>Calories</span> :{dataObj ? dataObj.calories : ""}
-      </p>
-      <h3>{dataObj ? dataObj.totalWeight : ""}</h3>
-      <ul>
-        {" "}
-        <span>Ingredient</span>
-        {dataObj
-          ? dataObj.ingredients.map((item, i) => (
-              <li>{`${item.foodCategory} and Ingredient ${item.text}`}</li>
-            ))
-          : ""}
-      </ul>
+    <div className="recipe-container">
+      <div className="">
+        <img src={dataObj ? dataObj.image : ""} alt="image" />
+        <p>
+          <span>{`Calories :${dataObj ? dataObj.calories : ""} kcal`}</span>
+        </p>
+        {/* <h3>{dataObj ? dataObj.totalWeight : ""}</h3> */}
+        <ul>
+          {" "}
+          <span>Ingredient</span>
+          {dataObj
+            ? dataObj.ingredients.map((item, i) => (
+                <li>{`<img src=${item ? item.image : ""}/> and Ingredient ${
+                  item.text
+                }`}</li>
+              ))
+            : ""}
+        </ul>
+      </div>
     </div>
   );
 };

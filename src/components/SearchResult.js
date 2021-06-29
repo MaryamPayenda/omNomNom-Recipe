@@ -19,7 +19,7 @@ const SearchResult = ({ title, image, id, calories }) => {
             },
           }}
         >
-          More Info
+          ingredients
         </Link>
       </div>
     </div>

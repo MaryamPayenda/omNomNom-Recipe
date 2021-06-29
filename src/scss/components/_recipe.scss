@@ -1,7 +1,8 @@
-.container {
-  @include flex-box;
-  display: grid;
-  grid-template-columns: 10vw 1fr 1fr 1fr 10vw;
+.recipe-container {
+  @include flex-column;
+  border: 1px red solid;
+  // display: grid;
+  // grid-template-columns: 10vw 1fr 1fr 1fr 10vw;
 
   justify-content: space-around;
 }

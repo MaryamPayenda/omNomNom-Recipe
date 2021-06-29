@@ -2,8 +2,8 @@
   @include flex-column;
 }
 .container {
-  @include flex-column;
-  width: 80vw;
+  @include flex-row;
+  width: 100vw;
 }
 i {
   justify-self: center;
