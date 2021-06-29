@@ -7,3 +7,22 @@
   height: 30rem;
   width: 95%;
 }
+.meat {
+  border: 2px firebrick dashed;
+  @include flex-box;
+  width: 30%;
+  height: 60%;
+}
+
+.vegetarian {
+  border: 2px wheat dashed;
+  @include flex-box;
+  width: 30%;
+  height: 60%;
+}
+.vegan {
+  border: 2px fuchsia dashed;
+  @include flex-box;
+  width: 30%;
+  height: 60%;
+}
