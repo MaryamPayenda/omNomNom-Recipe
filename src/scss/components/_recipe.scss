@@ -1,7 +1,7 @@
 .container {
   @include flex-box;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 10vw 1fr 1fr 1fr 10vw;
 
   justify-content: space-around;
 }
