@@ -1,0 +1,21 @@
+.container {
+  @include flex-box;
+  display: grid;
+  grid-template-columns: 10vw 1fr 1fr 1fr 10vw;
+
+  justify-content: space-around;
+}
+.recipe {
+  @include flex-box;
+  border: solid 2px black;
+
+  width: 25vw;
+
+  div {
+    border: dotted 2px salmon;
+    @include flex-row;
+  }
+}
+ul {
+  list-style: none;
+}
