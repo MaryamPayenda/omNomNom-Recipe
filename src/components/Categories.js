@@ -2,9 +2,11 @@ import React from "react";
 
 function Categories() {
   return (
-    <React.Fragment>
-      <div></div>
-    </React.Fragment>
+    <div className="Categories">
+      <div>Meat</div>
+      <div>Vegetarian</div>
+      <div>Vegen</div>
+    </div>
   );
 }
 

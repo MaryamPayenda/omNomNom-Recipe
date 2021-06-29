@@ -3,7 +3,7 @@ import Nav from "./components/Nav";
 import Home from "./components/Home";
 import About from "./components/About";
 import Footer from "./components/Footer";
-import Recipe from "./components/Recipe";
+import Categories from "./components/Categories";
 // import SearchResult from "./components/Recipe";
 
 import React, { useState, useEffect, useRef } from "react";
@@ -19,7 +19,7 @@ const App = () => {
 
         <Switch>
           <Route path="/" exact component={Home} />
-          {/* <Route path="/Recipe" exact component={Recipe} /> */}
+          <Route path="/Categories" exact component={Categories} />
           <Route path="/about" exact component={About} />
         </Switch>
       </Router>
