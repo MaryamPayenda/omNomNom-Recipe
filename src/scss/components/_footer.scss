@@ -2,9 +2,7 @@ footer {
   h4 {
     font-size: 0.8rem;
   }
+  text-align: center;
   @include flex-column;
-  margin: 1rem;
-  .footer-container {
-    @include flex-column;
-  }
+  margin: 1.8rem;
 }

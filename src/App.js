@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import React, { useState, useEffect, useRef } from "react";
 import Recipe from "./components/SearchResult";
 import SearchResult from "./components/SearchResult";
+import { RiArrowDropRightLine, RiArrowDropLeftLine } from "react-icons/ri";
 
 const App = () => {
   const APP_ID = "271b281a";
@@ -69,26 +70,33 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="main">
       <Router>
         <Nav />
 
         <Switch></Switch>
       </Router>
-      <form className="search-form" onSubmit={getSearch}>
-        <input
-          type="text"
-          className="search-bar"
-          value={search}
-          onChange={handleSearch}
-          placeholder="Search..."
-        />
-        <button type="submit" className="search-btn">
-          Search
-        </button>
-      </form>
+      <div className="search">
+        {" "}
+        <form className="search-form" onSubmit={getSearch}>
+          <input
+            type="text"
+            className="search-bar"
+            value={search}
+            onChange={handleSearch}
+            placeholder="Search..."
+          />
+          <button type="submit" className="search-btn">
+            Search
+          </button>
+        </form>
+      </div>
+      <h1>Get inspired...</h1>
       <div className="container">
-        {pagination}
+        <p className="prev" onClick={prevClick}>
+          <RiArrowDropLeftLine />
+        </p>
+        {/* {pagination} */}
         {recipes.map(({ recipe, i }) => (
           <SearchResult
             pagination={pagination}
@@ -101,10 +109,9 @@ const App = () => {
             ingredients={recipe.ingredients}
           />
         ))}
-        <div className="p-nButtons">
-          <p onClick={prevClick}>Prev</p>
-          <p onClick={nextClick}>Next</p>
-        </div>
+        <p className="next" onClick={nextClick}>
+          <RiArrowDropRightLine />
+        </p>
       </div>
       {/* <button type="submit" className="search-btn">
         Search

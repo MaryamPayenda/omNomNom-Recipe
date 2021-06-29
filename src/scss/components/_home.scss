@@ -1,0 +1,4 @@
+.container {
+  @include flex-column;
+  width: 100vw;
+}
