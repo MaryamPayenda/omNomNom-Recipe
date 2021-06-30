@@ -4,6 +4,7 @@
 .recipe-container {
   @include flex-column;
   justify-content: space-around;
+
 }
 
 .recipe {
@@ -34,8 +35,10 @@
   h3 {
     font-size: 1rem;
     color: $onn1;
+
   }
 }
+
 
 ul {
   // display: grid;
@@ -63,4 +66,5 @@ ul {
   &:hover {
     cursor: pointer;
   }
+
 }
