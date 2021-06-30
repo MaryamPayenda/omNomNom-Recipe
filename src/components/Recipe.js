@@ -30,14 +30,21 @@ const Recipe = () => {
     <div className="recipe-container">
       <div className="single-recipe">
         <img src={dataObj ? dataObj.image : ""} alt="image" />
-        <p>{dataObj ? dataObj.cuisineType : ""}</p>
         <p>
-          <span className="calorie-span">Calories</span>
-          {` :${dataObj ? dataObj.calories : ""} kcal`}
+          {" "}
+          <span className="design-span">Cuisine: </span>
+          {dataObj ? dataObj.cuisineType : ""}
         </p>
-        <h3>{dataObj ? dataObj.dietLabels : ""}</h3>
+        <p>
+          <span className="design-span">Calories</span>
+          {` :${dataObj ? Math.floor(dataObj.calories) : ""} kcal`}
+        </p>
+        <p>
+          <span className="design-span">DietLable</span>
+          {dataObj ? dataObj.dietLabels : ""}
+        </p>
         <ul>
-          <span className="calorie-span">ingredients</span>
+          <span className="design-span">ingredients</span>
           {dataObj
             ? dataObj.ingredients.map((item, i) => (
                 <li>{` and Ingredient ${item.text} ${(
