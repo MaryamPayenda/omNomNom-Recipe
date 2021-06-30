@@ -50,3 +50,13 @@ header {
     display: none;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .navBar__container nav {
+    display: flex;
+    // justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 7rem;
+  }
+}

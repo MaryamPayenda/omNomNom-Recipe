@@ -9,6 +9,7 @@ const Nav = () => {
         <div className="navLogo">
           <Link to="/">
 
+
             <li>
               <img id="logoImg" src={logo} />
             </li>
@@ -19,14 +20,16 @@ const Nav = () => {
             <Link to="/">
               <li>HOMEPAGE</li>
             </Link>
-            <Link to="/recipe">
-              <li>RECIPES</li>
-            </Link>
+<Link to="/categories">
+            <li>CATEGORIES</li>
+          </Link>
+            
             <Link to="/about">
               <li>ABOUT US</li>
             </Link>
           </nav>{" "}
         </div>
+
 
       </div>
     </header>

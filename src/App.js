@@ -4,7 +4,12 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Footer from "./components/Footer";
 
-import Recipe from "./components/Recipe";
+import Categories from "./components/Categories";
+
+
+
+
+
 
 import React, { useState, useEffect, useRef } from "react";
 
@@ -24,7 +29,15 @@ const App = () => {
         <Switch>
           <Route path="/" exact component={Home} />
 
-          <Route path="/omNomNom-Recipe" component={Home} />
+          
+      
+       
+
+   
+
+
+          <Route path="/omNomNom-Recipe" exact component={Home} />
+             <Route path="/categories"  component={Categories} />
           <Route path="/about" component={About} />
           <Route path={() => "/main" || "/admin" || "/any-other-word"}>
             <WrongTurn />
@@ -44,6 +57,7 @@ const App = () => {
 
 
   
+
 
     </div>
   );
