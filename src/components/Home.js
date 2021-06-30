@@ -9,7 +9,7 @@ const Home = () => {
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState();
   const [pagination, setPagination] = useState(0);
-
+  const [rPramater, setRPramater] = useState();
   // useref
   const prevSearchIdRef = useRef();
   useEffect(() => {
@@ -35,7 +35,7 @@ const Home = () => {
       const data = await response.json();
       setRecipes(data.hits);
 
-      // console.log(data.hits);
+      console.log(data.hits);
     };
 
     getRecipes();
@@ -64,6 +64,7 @@ const Home = () => {
 
   return (
     <React.Fragment>
+
       <div className="main">
         {" "}
         <div className="search">
@@ -97,6 +98,7 @@ const Home = () => {
                 calories={recipe.calories}
                 image={recipe.image}
                 ingredients={recipe.ingredients}
+                id={recipe.uri.split("_")[1]}
               />
             ))}
           </div>
@@ -105,7 +107,8 @@ const Home = () => {
             <RiArrowDropRightLine />
           </i>
         </div>
-      </div>
+
+      
     </React.Fragment>
   );
 };

@@ -8,6 +8,7 @@ const Nav = () => {
       <div className="navBar__container">
         <div className="navLogo">
           <Link to="/">
+
             <li>
               <img id="logoImg" src={logo} />
             </li>
@@ -26,6 +27,7 @@ const Nav = () => {
             </Link>
           </nav>{" "}
         </div>
+
       </div>
     </header>
   );

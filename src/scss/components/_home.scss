@@ -3,7 +3,10 @@
 }
 .container {
   @include flex-row;
+
   width: 80vw;
+
+
 }
 .singleRecipe {
   display: flex;
