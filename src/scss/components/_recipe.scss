@@ -1,20 +1,9 @@
 .container {
   @include flex-box;
 }
-
 .recipe-container {
   @include flex-column;
-
-  // display: grid;
-  // grid-template-columns: 10vw 1fr 1fr 1fr 10vw;
-
   justify-content: space-around;
-  .design-span {
-    font-weight: bold;
-  }
-  ul {
-    list-style-type: none;
-  }
 }
 
 .recipe {
@@ -23,7 +12,6 @@
 }
 .single-recipe {
   @include flex-column;
-
   width: 80vw;
   margin-top: 1rem;
   .twoBlocks {
@@ -38,55 +26,41 @@
   }
   .ing {
     @include flex-column;
+  }
 
-    width: 80vw;
-    margin-top: 1rem;
-    .twoBlocks {
-      @include flex-row;
-      .leftBlock {
-        width: 20vw;
-      }
-    }
-    p {
-      @include flex-row;
-      margin: 0.5rem;
-    }
-    .ing {
-      @include flex-column;
-    }
-    h2 {
-      font-size: 5rem;
-    }
-    h3 {
-      font-size: 1rem;
-      color: $onn1;
-    }
+  h2 {
+    font-size: 5rem;
+  }
+  h3 {
+    font-size: 1rem;
+    color: $onn1;
+  }
+}
 
-    .linkP {
-      margin: 1rem;
-      padding: 0.5rem;
-      a {
-        color: black;
-      }
-      border-radius: 0.5rem;
-      background-color: $onn2;
-      &:hover {
-        cursor: pointer;
-      }
+ul {
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  list-style: none;
+  li {
+    i {
+      font-size: 2rem;
+      color: $onn4;
     }
-    ul {
-      // display: grid;
-      // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-      list-style: none;
-      li {
-        i {
-          font-size: 2rem;
-          color: $onn4;
-        }
-        img {
-          width: 2rem;
-        }
-      }
+    img {
+      width: 2rem;
     }
+  }
+}
+
+.linkP {
+  margin: 1rem;
+  padding: 0.5rem;
+  a {
+    color: black;
+  }
+  border-radius: 0.5rem;
+  background-color: $onn2;
+  &:hover {
+    cursor: pointer;
   }
 }
