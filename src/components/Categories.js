@@ -1,25 +1,24 @@
 import React, { useState, useEffect } from "react";
-import Axios from "axios";
+// import Axios from "axios";
 import { Link } from "react-router-dom";
 
 function Categories() {
-  const APP_ID = "271b281a";
-  const APP_KEY = "88c627abf78667444cf4d804190f1b2c";
-  const url = `
-    https://api.edamam.com/search?q=${type}&app_id=${APP_ID}&app_key=${APP_KEY}`;
-  const meat = async () => await Axios.get(url);
-  console.log(meat);
+  // useEffect(() => {
+  //   const meat =fetch(url);
+  // });
+  // const meat = () => await fetch(url);
+  // console.log(meat);
   return (
     <div className="categories">
-      <Link to={meat}>
-        <Dishes type="meat" />
+      <Link to="/Dishes/meat">
+        <div type="meat" />
         <div className="meat">Meat</div>
       </Link>
-      <Link>
+      <Link to="/Dishes/vegetarian">
         <div className="vegetarian">Vegetarian</div>
         {/* <Dishes type="Vegetarian" /> */}
       </Link>
-      <Link>
+      <Link to="/Dishes/vegan">
         <div className="vegan">Vegen</div>
         {/* <Dishes type="vegan"></Dishes> */}
       </Link>
