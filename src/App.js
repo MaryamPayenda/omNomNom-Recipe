@@ -1,13 +1,12 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Nav from "./components/Nav";
+// import Nav from "./components/Nav";
 import Home from "./components/Home";
 import About from "./components/About";
 import Footer from "./components/Footer";
+import NavBar from "./components/nav/NavBar";
 
 import Recipe from "./components/Recipe";
 import Categories from "./components/Categories";
-
-
 
 import React, { useState, useEffect, useRef } from "react";
 
@@ -19,7 +18,8 @@ const App = () => {
   return (
     <div>
       <Router>
-        <Nav />
+        <NavBar />
+        {/* <Nav /> */}
         <Switch>
           <Route path="/" exact component={Home} />
 
