@@ -11,7 +11,7 @@ const Nav = () => {
             <li>
               <img id="logoImg" src={logo} />
             </li>
-          </Link>{" "}
+          </Link>
         </div>
         <div className="navBar">
           <nav>
@@ -25,7 +25,7 @@ const Nav = () => {
             <Link to="/about">
               <li>ABOUT US</li>
             </Link>
-          </nav>{" "}
+          </nav>
         </div>
       </div>
     </header>

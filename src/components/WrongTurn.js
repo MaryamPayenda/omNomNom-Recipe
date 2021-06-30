@@ -3,7 +3,6 @@ const WrongTurn = () => {
   return (
     <div className="wrong">
       <div className="rotatingPineapple">
-        {" "}
         <div className="left">
           <GiPineapple />
         </div>
@@ -11,7 +10,7 @@ const WrongTurn = () => {
         <div className="right">
           <GiPineapple />
         </div>
-      </div>{" "}
+      </div>
       You took a wrong turn somewhere...
     </div>
   );
