@@ -6,8 +6,12 @@ const Nav = () => {
     <React.Fragment>
       <nav>
         <ul>
+         
+
+            
           <li>
-            <Link to="/home">HOME</Link>
+
+            <Link to="/">HOME</Link>
           </li>
 
           <li>
@@ -15,7 +19,7 @@ const Nav = () => {
           </li>
 
           <li>
-            {" "}
+           
             <Link to="/about">ABOUT US</Link>
           </li>
         </ul>

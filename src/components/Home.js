@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import SearchResult from "./SearchResult";
 import { RiArrowDropRightLine, RiArrowDropLeftLine } from "react-icons/ri";
+
 const Home = () => {
   const APP_ID = "271b281a";
   const APP_KEY = "88c627abf78667444cf4d804190f1b2c";
@@ -10,6 +11,7 @@ const Home = () => {
   const [query, setQuery] = useState();
   const [pagination, setPagination] = useState(0);
   const [rPramater, setRPramater] = useState();
+
   // useref
   const prevSearchIdRef = useRef();
   useEffect(() => {
@@ -56,10 +58,10 @@ const Home = () => {
     if (pagination === 0) {
       return;
     }
-    setPagination(pagination - 9);
+    setPagination(pagination - 18);
   };
   const nextClick = () => {
-    setPagination(pagination + 9);
+    setPagination(pagination + 18);
   };
 
   return (
@@ -82,6 +84,7 @@ const Home = () => {
         <h1>Get inspired...</h1>
         <div className="container">
           {/* {pagination}      */}
+
           <i onClick={prevClick}>
             <RiArrowDropLeftLine />
           </i>
