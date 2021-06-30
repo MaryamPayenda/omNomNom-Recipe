@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { GiPineapple } from "react-icons/gi";
 
 const Recipe = () => {
   const [dataObj, setDataObj] = useState();
@@ -30,43 +31,57 @@ const Recipe = () => {
     <div className="recipe-container">
       <div className="single-recipe">
         <h2>{dataObj ? dataObj.label : ""}</h2>
-        <img src={dataObj ? dataObj.image : ""} alt="dish-mage" />
-        <p>
-
-          <span className="calorie-span">Calories:&nbsp;</span>
-          {dataObj ? Math.floor(dataObj.calories) : ""}kcal
-
-          <span className="design-span">Cuisine: </span>
-          {dataObj ? dataObj.cuisineType : ""}
+        <img src={dataObj ? dataObj.image : ""} alt="dish-mage" />{" "}
+        <div className="twoBlocks">
+          {" "}
+          <div className="leftBlock">
+            {" "}
+            <p>
+              <h3 className="design-span">Cuisine:&nbsp;</h3>
+              {dataObj ? dataObj.cuisineType : "yummy"}
+            </p>
+            <p>
+              <h3 className="design-span">Meal Type:&nbsp;</h3>
+              {dataObj
+                ? dataObj.mealType[0].toUpperCase()
+                : //  +
+                  //   dataObj.mealType.substring(1)
+                  ""}
+            </p>
+            <p>
+              <h3 className="design-span">Calories:&nbsp;</h3>
+              {dataObj ? Math.floor(dataObj.calories) : ""}kcal
+            </p>
+            <p>
+              <h3 className="design-span">Diet Label:&nbsp;</h3>
+              {dataObj ? dataObj.dietLabels : ""}
+            </p>
+          </div>
+          <div className="rightBlock">
+            <p className="ing">
+              <h3 className="design-span">Ingredients:</h3>
+              <ul>
+                {dataObj
+                  ? dataObj.ingredients.map((item, i) => (
+                      <li>
+                        {/* <img src={item ? item.image : ""} /> */}
+                        <i>
+                          <GiPineapple />
+                        </i>
+                        {item.text}
+                      </li>
+                    ))
+                  : ""}
+              </ul>
+            </p>
+          </div>
+        </div>
+        <p className="linkP">
+          {" "}
+          <a href={dataObj ? dataObj.url : ""} target="_blank">
+            go see the full Recipe
+          </a>
         </p>
-       
-        <p>
-          <span className="design-span">DietLable</span>
-          {dataObj ? dataObj.dietLabels : ""}
-
-        </p>
-        <ul>
-
-         
-         
-
-          <span className="design-span">ingredients</span>
-
-          {dataObj
-            ? dataObj.ingredients.map((item, i) => (
-                <li>
-                  {` and Ingredient ${item.text} 
-                  
-                `}
-                  <img src={item ? item.image : ""} />
-                </li>
-              ))
-            : ""}
-        </ul>
-        
-        <a href={dataObj ? dataObj.url : ""} target="_blank">
-          to see the Recipe
-        </a>
       </div>
     </div>
   );

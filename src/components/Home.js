@@ -81,6 +81,7 @@ const Home = () => {
             </button>
           </form>
         </div>
+        <h1>Get inspired...</h1>
         <div className="container">
           {/* {pagination}      */}
           <i onClick={prevClick}>
