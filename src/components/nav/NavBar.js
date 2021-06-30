@@ -15,11 +15,13 @@ const NavBar = () => {
         {/* <div className="logo">
           <img src={`${process.env.PUBLIC_URL}/img/omNomNom.png`} />
         </div> */}
-
-        <Navigation />
-        <MobileNavigation />
+        <div className="links">
+          {" "}
+          <Navigation />
+          <MobileNavigation />
+        </div>
       </div>
-      <hr />
+      {/* <hr /> */}
     </div>
   );
 };

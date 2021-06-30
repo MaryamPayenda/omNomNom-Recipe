@@ -10,12 +10,12 @@ a {
   text-decoration: none;
 }
 
-@media (max-width: 414px) {
-  .searchResult {
-    @include flex-column; // display: flex;
-    // justify-content: center;
-    // align-content: flex-start;
-    width: 100vw;
-    margin: 2rem;
-  }
-}
+// @media (max-width: 414px) {
+//   .searchResult {
+//     @include flex-column; // display: flex;
+//     // justify-content: center;
+//     // align-content: flex-start;
+//     width: 100vw;
+//     margin: 2rem;
+//   }
+// }
