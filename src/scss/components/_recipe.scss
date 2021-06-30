@@ -1,10 +1,9 @@
-
 .container {
   @include flex-box;
-
+}
 .recipe-container {
   @include flex-column;
-  
+
   // display: grid;
   // grid-template-columns: 10vw 1fr 1fr 1fr 10vw;
 
@@ -14,13 +13,11 @@
   }
 }
 
-
-
 .recipe {
   @include flex-box;
   border: solid 2px black;
 
-
-ul {
-  list-style: none;
+  ul {
+    list-style: none;
+  }
 }

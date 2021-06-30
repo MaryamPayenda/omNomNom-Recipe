@@ -64,7 +64,6 @@ const Home = () => {
 
   return (
     <React.Fragment>
-
       <div className="main">
         {" "}
         <div className="search">
@@ -107,8 +106,7 @@ const Home = () => {
             <RiArrowDropRightLine />
           </i>
         </div>
-
-      
+      </div>
     </React.Fragment>
   );
 };
