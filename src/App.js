@@ -4,11 +4,17 @@ import Home from "./components/Home";
 import Recipe from "./components/Recipe";
 import About from "./components/About";
 import Footer from "./components/Footer";
+
 import Dishes from "./components/Dishes";
+
 import NavBar from "./components/nav/NavBar";
+
 import Categories from "./components/Categories";
+
 import React, { useState, useEffect, useRef } from "react";
+
 import WrongTurn from "./components/WrongTurn";
+
 import { RiArrowDropRightLine, RiArrowDropLeftLine } from "react-icons/ri";
 
 const App = () => {
