@@ -9,8 +9,6 @@ import Dishes from "./components/Dishes";
 
 import NavBar from "./components/nav/NavBar";
 
-
-import Recipe from "./components/Recipe";
 import Categories from "./components/Categories";
 
 import React, { useState, useEffect, useRef } from "react";
@@ -41,19 +39,15 @@ const App = () => {
             }}
           />
 
-
           <Route path={() => "/main" || "/admin" || "/any-other-word"}>
             <WrongTurn />
           </Route>
         </Switch>
       </Router>
 
-
-
       <footer>
         <Footer />
       </footer>
-
     </div>
   );
 };
