@@ -3,11 +3,18 @@
 }
 .container {
   @include flex-row;
-  width: 100vw;
+
+  width: 80vw;
+
+
+}
+.singleRecipe {
+  display: flex;
+  justify-content: space-between;
 }
 i {
   justify-self: center;
-  font-size: 5rem;
+  font-size: 8rem;
   color: $onn2;
   width: 5vw;
   text-align: center;

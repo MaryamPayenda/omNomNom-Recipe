@@ -1,8 +1,10 @@
 // import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+
 const SearchResult = ({ title, image, id, calories }) => {
   // console.log(id, title, calories);
+
 
   return (
     <div className="searchResult">
@@ -22,6 +24,7 @@ const SearchResult = ({ title, image, id, calories }) => {
           ingredients
         </Link>
       </div>
+
     </div>
   );
 };

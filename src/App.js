@@ -5,12 +5,15 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 
 import Recipe from "./components/Recipe";
-// import SearchResult from "./components/Recipe";
 
 import React, { useState, useEffect, useRef } from "react";
+
+import WrongTurn from "./components/WrongTurn";
+
 import SearchResult from "./components/SearchResult";
 
 import { RiArrowDropRightLine, RiArrowDropLeftLine } from "react-icons/ri";
+
 
 const App = () => {
   return (
@@ -21,16 +24,27 @@ const App = () => {
         <Switch>
           <Route path="/" exact component={Home} />
 
-          <Route path="/Recipe" exact component={Recipe} />
+          <Route path="/omNomNom-Recipe" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path={() => "/main" || "/admin" || "/any-other-word"}>
+            <WrongTurn />
+          </Route>
+        </Switch>
+      </Router>
+      <footer>
+        <Footer />
+      </footer>
+
+
+         
           
 
      
-          <Route path="/about" exact component={About} />
+        
 
-        </Switch>
-      </Router>
 
-      <Footer />
+  
+
     </div>
   );
 };

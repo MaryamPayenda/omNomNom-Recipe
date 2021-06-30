@@ -1,24 +1,11 @@
-// .recipe {
-//   @include flex-column;
-//   border: dotted 2px salmon;
-//   margin: 2rem;
-//   //   width: 80vw;
-//   div {
-//     @include flex-row;
-//   }
-// }
-// ul {
-//   list-style: none;
-// }
-
 .searchResult {
-  @include flex-column;
-  width: 25vw;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  width: 20vw;
+  margin: 2rem;
 }
-.flexStart {
-  @include flex-column;
-}
+
 a {
   text-decoration: none;
-  // text-align: center;
 }

@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 
+
+
 const Recipe = () => {
   const [dataObj, setDataObj] = useState();
   const APP_ID = "271b281a";
@@ -25,6 +27,7 @@ const Recipe = () => {
   }, []);
 
   // console.log(dataObj);
+
   return (
     <div className="recipe-container">
       <div className="single-recipe">

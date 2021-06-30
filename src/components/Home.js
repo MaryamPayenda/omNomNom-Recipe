@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import SearchResult from "./SearchResult";
-
+import { RiArrowDropRightLine, RiArrowDropLeftLine } from "react-icons/ri";
 const Home = () => {
   const APP_ID = "271b281a";
   const APP_KEY = "88c627abf78667444cf4d804190f1b2c";
@@ -51,37 +51,64 @@ const Home = () => {
     setSearch("");
   };
 
+  // Prev + Next Buttons
+  const prevClick = () => {
+    if (pagination === 0) {
+      return;
+    }
+    setPagination(pagination - 9);
+  };
+  const nextClick = () => {
+    setPagination(pagination + 9);
+  };
+
   return (
     <React.Fragment>
-      <form className="search-form" onSubmit={getSearch}>
-        <input
-          type="text"
-          className="search-bar"
-          value={search}
-          onChange={handleSearch}
-          placeholder="Search..."
-        />
-        <button type="submit" className="search-btn">
-          Search
-        </button>
-      </form>
-      <div className="container">
-        {pagination}
-        {console.log(recipes)}
-        {recipes.map(({ recipe, i }) => (
-          <SearchResult
-            pagination={pagination}
-            setPagination={setPagination}
-            key={i}
-            title={recipe.label}
-            cuisine={recipe.cuisineType}
-            calories={recipe.calories}
-            image={recipe.image}
-            ingredients={recipe.ingredients}
-            id={recipe.uri.split("_")[1]}
-          />
-        ))}
-      </div>
+
+      <div className="main">
+        {" "}
+        <div className="search">
+          {" "}
+          <form className="search-form" onSubmit={getSearch}>
+            <input
+              type="text"
+              className="search-bar"
+              value={search}
+              onChange={handleSearch}
+              placeholder="Search..."
+            />
+            <button type="submit" className="search-btn">
+              Search
+            </button>
+          </form>
+        </div>
+        <div className="container">
+          {/* {pagination}      */}
+          <i onClick={prevClick}>
+            <RiArrowDropLeftLine />
+          </i>
+          <div className="singleRecipe">
+            {recipes.map(({ recipe, i }) => (
+              <SearchResult
+                pagination={pagination}
+                setPagination={setPagination}
+                key={i}
+                title={recipe.label}
+                cuisine={recipe.cuisineType}
+                calories={recipe.calories}
+                image={recipe.image}
+                ingredients={recipe.ingredients}
+                id={recipe.uri.split("_")[1]}
+              />
+            ))}
+          </div>
+
+          <i onClick={nextClick}>
+            <RiArrowDropRightLine />
+          </i>
+        </div>
+
+      
     </React.Fragment>
   );
 };
