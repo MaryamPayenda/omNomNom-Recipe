@@ -5,4 +5,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   //   height: 40rem;
+  li {
+    border-bottom: 1px gray solid;
+  }
 }

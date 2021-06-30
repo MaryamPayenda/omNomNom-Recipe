@@ -10,7 +10,7 @@ function Dishes({ id, title }) {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setDishes(data.hits));
-    // .then((data) => console.log(data));
+    // .then((data) => console.log(data.hits));
   }, []);
   return (
     <ul id="dishes">
