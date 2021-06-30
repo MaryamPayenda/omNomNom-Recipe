@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-
-
 const Recipe = () => {
   const [dataObj, setDataObj] = useState();
   const APP_ID = "271b281a";
@@ -33,13 +31,20 @@ const Recipe = () => {
       <div className="single-recipe">
         <img src={dataObj ? dataObj.image : ""} alt="image" />
         <p>
-          <span className="calorie-span">Calories</span>
-          {` :${dataObj ? dataObj.calories : ""} kcal`}
-        </p>
-        {/* <h3>{dataObj ? dataObj.totalWeight : ""}</h3> */}
-        <ul>
           {" "}
-          <span className="calorie-span">ingredients</span>
+          <span className="design-span">Cuisine: </span>
+          {dataObj ? dataObj.cuisineType : ""}
+        </p>
+        <p>
+          <span className="design-span">Calories</span>
+          {` :${dataObj ? Math.floor(dataObj.calories) : ""} kcal`}
+        </p>
+        <p>
+          <span className="design-span">DietLable</span>
+          {dataObj ? dataObj.dietLabels : ""}
+        </p>
+        <ul>
+          <span className="design-span">ingredients</span>
           {dataObj
             ? dataObj.ingredients.map((item, i) => (
                 <li>{` and Ingredient ${item.text} ${(
@@ -48,6 +53,9 @@ const Recipe = () => {
               ))
             : ""}
         </ul>
+        <a href={dataObj ? dataObj.url : ""} target="_blank">
+          to see the Recipe
+        </a>
       </div>
     </div>
   );
