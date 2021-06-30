@@ -6,14 +6,11 @@ const Nav = () => {
     <React.Fragment>
       <nav>
         <ul>
+         
+
+            
           <li>
-            {/* <Link to="/">
-              <div className="logo">
-                <img src={`${process.env.PUBLIC_URL}/img/omNomNom.png`} />
-              </div>{" "}
-            </Link> */}
-          </li>
-          <li>
+
             <Link to="/">HOME</Link>
           </li>
 
@@ -22,7 +19,7 @@ const Nav = () => {
           </li>
 
           <li>
-            {" "}
+           
             <Link to="/about">ABOUT US</Link>
           </li>
         </ul>
