@@ -9,7 +9,7 @@ const Home = () => {
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState();
   const [pagination, setPagination] = useState(0);
-
+  const [rPramater, setRPramater] = useState();
   // useref
   const prevSearchIdRef = useRef();
   useEffect(() => {
@@ -29,13 +29,13 @@ const Home = () => {
       }
       const response = await fetch(
         `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&from=${currentPagination}&to=${
-          currentPagination + 9
+          currentPagination + 3
         }`
       );
       const data = await response.json();
       setRecipes(data.hits);
 
-      // console.log(data.hits);
+      console.log(data.hits);
     };
 
     getRecipes();
@@ -67,6 +67,7 @@ const Home = () => {
       </form>
       <div className="container">
         {pagination}
+        {console.log(recipes)}
         {recipes.map(({ recipe, i }) => (
           <SearchResult
             pagination={pagination}
@@ -77,6 +78,7 @@ const Home = () => {
             calories={recipe.calories}
             image={recipe.image}
             ingredients={recipe.ingredients}
+            id={recipe.uri.split("_")[1]}
           />
         ))}
       </div>
