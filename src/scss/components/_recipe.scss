@@ -20,4 +20,10 @@
 .recipe {
   @include flex-box;
   border: solid 2px black;
+
+
+  ul {
+    list-style: none;
+  }
+
 }

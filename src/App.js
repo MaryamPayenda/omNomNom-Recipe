@@ -3,8 +3,12 @@ import Nav from "./components/Nav";
 import Home from "./components/Home";
 import About from "./components/About";
 import Footer from "./components/Footer";
-import Categories from "./components/Categories";
+
 import Recipe from "./components/Recipe";
+import Categories from "./components/Categories";
+
+
+
 import React, { useState, useEffect, useRef } from "react";
 
 import WrongTurn from "./components/WrongTurn";

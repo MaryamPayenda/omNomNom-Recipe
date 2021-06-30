@@ -29,30 +29,41 @@ const Recipe = () => {
   return (
     <div className="recipe-container">
       <div className="single-recipe">
-        <img src={dataObj ? dataObj.image : ""} alt="image" />
+        <h2>{dataObj ? dataObj.label : ""}</h2>
+        <img src={dataObj ? dataObj.image : ""} alt="dish-mage" />
         <p>
-          {" "}
+
+          <span className="calorie-span">Calories:&nbsp;</span>
+          {dataObj ? Math.floor(dataObj.calories) : ""}kcal
+
           <span className="design-span">Cuisine: </span>
           {dataObj ? dataObj.cuisineType : ""}
         </p>
-        <p>
-          <span className="design-span">Calories</span>
-          {` :${dataObj ? Math.floor(dataObj.calories) : ""} kcal`}
-        </p>
+       
         <p>
           <span className="design-span">DietLable</span>
           {dataObj ? dataObj.dietLabels : ""}
+
         </p>
         <ul>
+
+         
+         
+
           <span className="design-span">ingredients</span>
+
           {dataObj
             ? dataObj.ingredients.map((item, i) => (
-                <li>{` and Ingredient ${item.text} ${(
+                <li>
+                  {` and Ingredient ${item.text} 
+                  
+                `}
                   <img src={item ? item.image : ""} />
-                )}`}</li>
+                </li>
               ))
             : ""}
         </ul>
+        
         <a href={dataObj ? dataObj.url : ""} target="_blank">
           to see the Recipe
         </a>
