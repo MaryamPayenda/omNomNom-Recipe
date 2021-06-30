@@ -10,9 +10,11 @@ const About = () => {
       </p>
       <h3>Credits</h3>
       <p>
-        We used:{" "}
+        We used:
         <ul>
-          <li>API: edama api (link)</li>
+          <li>
+            API: <a href="https://www.edamam.com/">EDAMAM API</a>
+          </li>
           <li>Fonts: Open Sans & Mistrully (links)</li>
         </ul>
         Open Sans (link)

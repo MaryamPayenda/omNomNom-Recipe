@@ -19,3 +19,16 @@
   align-items: center;
   flex-direction: column;
 }
+// Animations
+@mixin RotatingPineappleRight {
+  animation: pineappleRight 4s infinite;
+}
+@keyframes pineappleRight {
+  0% {
+    transform: rotateZ(-450deg);
+  }
+
+  100% {
+    transform: rotateZ(45deg);
+  }
+}
