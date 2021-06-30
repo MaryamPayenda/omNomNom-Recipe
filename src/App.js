@@ -1,9 +1,14 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import Nav from "./components/Nav";
 import Home from "./components/Home";
+import Recipe from "./components/Recipe";
 import About from "./components/About";
 import Footer from "./components/Footer";
+
+import Dishes from "./components/Dishes";
+
 import NavBar from "./components/nav/NavBar";
+
 
 import Recipe from "./components/Recipe";
 import Categories from "./components/Categories";
@@ -25,17 +30,30 @@ const App = () => {
 
           <Route path="/omNomNom-Recipe" exact component={Home} />
           <Route path="/categories" component={Categories} />
-          <Route path="/about" component={About} />
+
           <Route path="/recipe" component={Recipe} />
+          <Route path="/about" component={About} />
+          <Route
+            path="/dishes/:id"
+            component={({ match }) => {
+              console.log(match);
+              return <Dishes id={match.params.id} />;
+            }}
+          />
+
+
           <Route path={() => "/main" || "/admin" || "/any-other-word"}>
             <WrongTurn />
           </Route>
         </Switch>
       </Router>
 
+
+
       <footer>
         <Footer />
       </footer>
+
     </div>
   );
 };

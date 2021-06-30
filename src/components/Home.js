@@ -65,9 +65,7 @@ const Home = () => {
   return (
     <React.Fragment>
       <div className="main">
-        {" "}
         <div className="search">
-          {" "}
           <form className="search-form" onSubmit={getSearch}>
             <input
               type="text"

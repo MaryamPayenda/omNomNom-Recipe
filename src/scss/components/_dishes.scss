@@ -1,0 +1,11 @@
+#dishes {
+  border: 2px goldenrod dotted;
+  //   display: flex;
+  @include flex-box;
+  flex-direction: column;
+  flex-wrap: wrap;
+  //   height: 40rem;
+  li {
+    border-bottom: 1px gray solid;
+  }
+}

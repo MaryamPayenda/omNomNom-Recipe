@@ -17,6 +17,15 @@
   }
 }
 
+
+.recipe {
+  @include flex-box;
+  border: solid 2px black;
+}
+
+ul {
+  list-style: none;
+
 .single-recipe {
   @include flex-column;
 
@@ -69,4 +78,5 @@
       }
     }
   }
+
 }
