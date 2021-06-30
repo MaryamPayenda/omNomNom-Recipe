@@ -8,8 +8,6 @@ const Nav = () => {
       <div className="navBar__container">
         <div className="navLogo">
           <Link to="/">
-
-
             <li>
               <img id="logoImg" src={logo} />
             </li>
@@ -18,19 +16,17 @@ const Nav = () => {
         <div className="navBar">
           <nav>
             <Link to="/">
-              <li>HOMEPAGE</li>
+              <li>HOME</li>
             </Link>
-<Link to="/categories">
-            <li>CATEGORIES</li>
-          </Link>
-            
+            <Link to="/categories">
+              <li>CATEGORIES</li>
+            </Link>
+
             <Link to="/about">
               <li>ABOUT US</li>
             </Link>
           </nav>{" "}
         </div>
-
-
       </div>
     </header>
   );
