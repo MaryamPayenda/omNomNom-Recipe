@@ -7,7 +7,9 @@
 //   const APP_KEY = "88c627abf78667444cf4d804190f1b2c";
 //   const url = `
 //     https://api.edamam.com/search?q=${type}&app_id=${APP_ID}&app_key=${APP_KEY}`;
+
 //   // const meat = async () => await Axios.get(url);
+
 //   console.log(meat);
 //   return (
 //     <div className="categories">

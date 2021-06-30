@@ -32,13 +32,26 @@ const Recipe = () => {
         <h2>{dataObj ? dataObj.label : ""}</h2>
         <img src={dataObj ? dataObj.image : ""} alt="dish-mage" />
         <p>
+
           <span className="calorie-span">Calories:&nbsp;</span>
           {dataObj ? Math.floor(dataObj.calories) : ""}kcal
+
+          <span className="design-span">Cuisine: </span>
+          {dataObj ? dataObj.cuisineType : ""}
         </p>
-        {/* <h3>{dataObj ? dataObj.totalWeight : ""}</h3> */}
+       
+        <p>
+          <span className="design-span">DietLable</span>
+          {dataObj ? dataObj.dietLabels : ""}
+
+        </p>
         <ul>
-          {" "}
-          <span className="calorie-span">Ingredients</span>
+
+         
+         
+
+          <span className="design-span">ingredients</span>
+
           {dataObj
             ? dataObj.ingredients.map((item, i) => (
                 <li>
@@ -50,6 +63,10 @@ const Recipe = () => {
               ))
             : ""}
         </ul>
+        
+        <a href={dataObj ? dataObj.url : ""} target="_blank">
+          to see the Recipe
+        </a>
       </div>
     </div>
   );

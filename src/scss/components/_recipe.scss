@@ -1,6 +1,7 @@
 .container {
   @include flex-box;
 }
+
 .recipe-container {
   @include flex-column;
 
@@ -8,8 +9,11 @@
   // grid-template-columns: 10vw 1fr 1fr 1fr 10vw;
 
   justify-content: space-around;
-  .calorie-span {
+  .design-span {
     font-weight: bold;
+  }
+  ul {
+    list-style-type: none;
   }
 }
 
@@ -17,7 +21,9 @@
   @include flex-box;
   border: solid 2px black;
 
+
   ul {
     list-style: none;
   }
+
 }
