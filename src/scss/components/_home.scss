@@ -3,10 +3,7 @@
 }
 .container {
   @include flex-row;
-
   width: 80vw;
-
-
 }
 .singleRecipe {
   display: flex;
@@ -18,4 +15,13 @@ i {
   color: $onn2;
   width: 5vw;
   text-align: center;
+}
+
+@media (max-width: 414px) {
+  .container {
+    width: 100vw;
+  }
+  .singleRecipe {
+    @include flex-column;
+  }
 }
