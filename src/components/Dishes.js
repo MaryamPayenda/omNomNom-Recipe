@@ -13,7 +13,7 @@ function Dishes({ id, title }) {
     // .then((data) => console.log(data));
   }, []);
   return (
-    <ul>
+    <ul id="dishes">
       {dishes !== undefined
         ? dishes.map((item) => (
             <React.Fragment>
