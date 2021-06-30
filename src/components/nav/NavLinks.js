@@ -7,6 +7,13 @@ const Nav = () => {
       <nav>
         <ul>
           <li>
+            {/* <Link to="/">
+              <div className="logo">
+                <img src={`${process.env.PUBLIC_URL}/img/omNomNom.png`} />
+              </div>{" "}
+            </Link> */}
+          </li>
+          <li>
             <Link to="/home">HOME</Link>
           </li>
 
