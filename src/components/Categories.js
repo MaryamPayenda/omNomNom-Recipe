@@ -6,9 +6,7 @@ import vegan_img from "../img/catogories33.jpg";
 
 function Categories() {
   return (
-
     <div>
-   
       <h2>Our favorite Categories</h2>
       <div className="categories">
         <Link to="/Dishes/meat">
@@ -30,7 +28,6 @@ function Categories() {
           </div>
         </Link>
       </div>
-
     </div>
   );
 }
