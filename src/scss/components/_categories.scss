@@ -1,6 +1,5 @@
 .categories {
   margin: 5% auto;
-
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -8,7 +7,6 @@
   width: 95%;
 }
 .meat {
-
   @include flex-box;
 
   flex-direction: column;
@@ -16,31 +14,26 @@
   height: 17rem;
 }
 #meat_img {
-
   width: 110%;
 }
 .vegetarian {
- 
   @include flex-box;
 
   flex-direction: column;
   width: 22rem;
   height: 17rem;
 }
-#vegetairian_img {
-
+#vegetarian_img {
   width: 110%;
 }
 .vegan {
- 
   @include flex-box;
- 
+
   flex-direction: column;
   width: 22rem;
   height: 17rem;
 }
 #vegan_img {
-  
   width: 110%;
 }
 @media screen and (max-width: 1024px) {
@@ -50,35 +43,30 @@
     flex-direction: column;
   }
   .meat {
-  
     @include flex-box;
     flex-direction: column;
     width: 100%;
     height: 100%;
   }
   #meat_img {
- 
     height: 86%;
     width: 75%;
   }
   .vegetarian {
- 
     @include flex-box;
     flex-direction: column;
     width: 100%;
     height: 100%;
   }
-  #vegetairian_img {
+  #vegetarian_img {
     height: 86%;
     width: 75%;
   }
   .vegan {
- 
     @include flex-box;
     flex-direction: column;
     width: 100%;
     height: 100%;
-  
   }
   #vegan_img {
     height: 86%;
