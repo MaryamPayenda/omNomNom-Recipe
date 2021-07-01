@@ -4,10 +4,14 @@
 .container {
   @include flex-row;
   width: 100vw;
-  .mobileArrows {
-    display: none;
+  h2 {
+    height: 15vh;
   }
 }
+.mobileArrows {
+  display: none;
+}
+
 .singleRecipe {
   display: flex;
   justify-content: space-between;
@@ -19,6 +23,7 @@ i {
   color: $onn2;
   width: 5vw;
   text-align: center;
+  cursor: pointer;
 }
 
 @media (max-width: 500px) {
@@ -28,6 +33,14 @@ i {
     }
     h2 {
       font-size: 1.8rem;
+      height: auto;
+    }
+  }
+  .mobileArrows {
+    display: inline;
+    .mobilePrev,
+    .mobileNext {
+      cursor: pointer;
     }
   }
   .container {
@@ -45,9 +58,5 @@ i {
       width: 80vw;
       margin-bottom: 1rem;
     }
-  }
-  .mobileArrows {
-    display: block;
-    font-size: large;
   }
 }
