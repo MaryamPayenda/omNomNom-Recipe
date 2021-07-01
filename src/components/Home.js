@@ -57,10 +57,10 @@ const Home = () => {
     if (pagination === 0) {
       return;
     }
-    setPagination(pagination - 18);
+    setPagination(pagination - 6);
   };
   const nextClick = () => {
-    setPagination(pagination + 18);
+    setPagination(pagination + 6);
   };
 
   return (
