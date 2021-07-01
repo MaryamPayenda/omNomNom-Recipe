@@ -38,14 +38,18 @@ const Recipe = () => {
             {" "}
             <p>
               <h3 className="design-span">Cuisine:&nbsp;</h3>
-              {dataObj ? dataObj.cuisineType : "yummy"}
+              {dataObj
+                ? dataObj.cuisineType
+                : // [0][0].toUpperCase() +
+                  //   dataObj.cuisineType[0].substring(1) ""
+                  "yummy"}
             </p>
             <p>
               <h3 className="design-span">Meal Type:&nbsp;</h3>
               {dataObj
-                ? dataObj.mealType[0].toUpperCase()
-                : //  +
-                  //   dataObj.mealType.substring(1)
+                ? dataObj.mealType
+                : // [0][0].toUpperCase() +
+                  //   dataObj.mealType[0].substring(1)
                   ""}
             </p>
             <p>

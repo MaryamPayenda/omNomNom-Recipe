@@ -1,12 +1,28 @@
+.roundAbout {
+  @include flex-box;
+  width: 100vw;
+}
 .about {
-  //   border: 2px violet dotted;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  //   align-items: center;
-  width: 93%;
-  height: 70%;
-  padding-bottom: 30%;
+  h2 {
+    margin: 2rem;
+  }
+  @include flex-column;
+  width: 40vw;
+  p {
+    text-align: center;
+    line-height: 1.6rem;
+  }
+  h4 {
+    margin-top: 4rem;
+  }
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 414px) {
+  .about {
+    width: 80vw;
+  }
 }

@@ -17,7 +17,7 @@ i {
   text-align: center;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 500px) {
   .main {
     h1 {
       font-size: 2.6rem;
@@ -28,6 +28,9 @@ i {
   }
   .container {
     width: 100vw;
+    i {
+      display: none;
+    }
   }
   .singleRecipe {
     width: 100vw;
