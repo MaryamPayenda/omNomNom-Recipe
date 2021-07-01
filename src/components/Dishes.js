@@ -28,19 +28,19 @@ function Dishes({ id, title }) {
                   <li key={item.recipe.label}>
                     <h4>{item.recipe.label}</h4>
                   </li>
-                   <li key={item.recipe.calories}>
-                    Calories:&nbsp;{Math.floor(item.recipe.calories)}kcal      
-                
+
+                  <li key={item.recipe.calories}>
+                    Calories:&nbsp;{Math.floor(item.recipe.calories)}kcal
                   </li>
 
                   <li key={item.recipe.cuisineType}>
                     {" "}
                     <strong>Cuisine:&nbsp; </strong>
                     {item.recipe.cuisineType}
-               
+                  </li>
                   <li className="btn">
                     <a href={item.recipe.url} target="_blank">
-                      See More
+                      More about this Food
                     </a>
                   </li>
                 </div>
