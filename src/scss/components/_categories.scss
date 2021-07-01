@@ -1,48 +1,49 @@
 .categories {
-  margin: 5% auto;
+  @include flex-row;
+  margin: auto;
   // border: 2px green dotted;
   // background-color: $onn5;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 30rem;
-  width: 95%;
+
+  width: 80vw;
 }
 .meat {
-  border: 2px grey solid;
   @include flex-box;
   background-color: $onn3;
-
   flex-direction: column;
-
   width: 22rem;
-  height: 17rem;
 }
 #meat_img {
-  border: 1px gray solid;
-  height: 68%;
-  width: 85%;
+  width: 20vw;
+  height: 10vw;
 }
 
 .vegetarian {
-  border: 2px grey solid;
   @include flex-box;
   background-color: $onn2;
 
   flex-direction: column;
 
   width: 22rem;
-  height: 17rem;
+}
+#vegetarian_img {
+  width: 20vw;
+  height: 10vw;
 }
 .vegan {
-  border: 2px grey solid;
   @include flex-box;
   background-color: $onn1;
 
   flex-direction: column;
   width: 22rem;
-  height: 17rem;
 }
+#vegan_img {
+  width: 20vw;
+  height: 10vw;
+}
+// mobile
 @media screen and (max-width: 600px) {
   .categories {
     display: flex;
