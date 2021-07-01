@@ -1,2 +1,0 @@
-(this["webpackJsonpomnumnum-recipe"]=this["webpackJsonpomnumnum-recipe"]||[]).push([[0],{9:function(e,n,t){"use strict";t.r(n);var c=t(1),r=t.n(c),s=t(3),i=t.n(s),o=t(0);var u=function(){return Object(o.jsx)("div",{className:"App"})};i.a.render(Object(o.jsx)(r.a.StrictMode,{children:Object(o.jsx)(u,{})}),document.getElementById("root"))}},[[9,1,2]]]);
-//# sourceMappingURL=main.18c9eb82.chunk.js.map
