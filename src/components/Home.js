@@ -57,10 +57,10 @@ const Home = () => {
     if (pagination === 0) {
       return;
     }
-    setPagination(pagination - 18);
+    setPagination(pagination - 6);
   };
   const nextClick = () => {
-    setPagination(pagination + 18);
+    setPagination(pagination + 6);
   };
 
   return (
@@ -106,7 +106,6 @@ const Home = () => {
             <RiArrowDropRightLine />
           </i>
           <div className="mobileArrows">
-            {" "}
             <i onClick={prevClick} className="mobilePrev">
               <RiArrowDropLeftLine />
             </i>
