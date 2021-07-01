@@ -3,11 +3,15 @@
 }
 .container {
   @include flex-row;
-  width: 80vw;
+  width: 100vw;
+  .mobileArrows {
+    display: none;
+  }
 }
 .singleRecipe {
   display: flex;
   justify-content: space-between;
+  width: 80vw;
 }
 i {
   justify-self: center;
@@ -17,20 +21,33 @@ i {
   text-align: center;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 500px) {
   .main {
     h1 {
-      font-size: 2.6rem;
+      font-size: 3rem;
     }
     h2 {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
     }
   }
   .container {
+    @include flex-column;
     width: 100vw;
+    .prev,
+    .next {
+      display: none;
+    }
   }
   .singleRecipe {
     width: 100vw;
     @include flex-column;
+    img {
+      width: 80vw;
+      margin-bottom: 1rem;
+    }
+  }
+  .mobileArrows {
+    display: block;
+    font-size: large;
   }
 }

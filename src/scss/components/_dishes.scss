@@ -6,7 +6,7 @@
   .container {
     @include flex-box;
     width: 80vw;
-    // height: 62vh;
+
 
     .dishes {
       display: flex;
@@ -18,29 +18,31 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        height: 23rem;
+
         width: 25rem;
-        padding: 20px;
-        overflow: hidden;
+       
+
         img {
-          height: 10rem;
           width: 12rem;
-          border-radius: 5px;
+       
         }
         li {
           text-align: center;
-          // overflow: hidden;
+        
           word-wrap: break-word;
         }
+   
         .btn {
-          height: 2rem;
-          width: 8rem;
+          margin: 1rem;
+          padding: 0.5rem;
+          a {
+            color: black;
+          }
+          border-radius: 0.5rem;
           background-color: $onn2;
-          border-radius: 10px;
-          text-decoration: none;
-          font-size: 15px;
-          color: white;
-          padding: 5px;
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
     }

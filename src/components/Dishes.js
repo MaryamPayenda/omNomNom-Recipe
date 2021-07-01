@@ -17,23 +17,27 @@ function Dishes({ id, title }) {
   }, []);
   return (
     <div className="mainContainer">
-      <h2>Different Testes</h2>
+      <h2>Yummy Recipes</h2>
       <div className="container">
         <ul className="dishes">
           {dishes !== undefined
             ? dishes.map((item) => (
                 <div className="li-design">
                   <img className="image" src={item.recipe.image} />
-                  <li key={item.recipe.label}>{item.recipe.label}</li>
-                  <li key={item.recipe.calories}>
-                    <strong>Calories : </strong>
-                    {item.recipe.calories}
+
+                  <li key={item.recipe.label}>
+                    <h4>{item.recipe.label}</h4>
                   </li>
+                   <li key={item.recipe.calories}>
+                    Calories:&nbsp;{Math.floor(item.recipe.calories)}kcal      
+                
+                  </li>
+
                   <li key={item.recipe.cuisineType}>
                     {" "}
-                    <strong>Cuisin: </strong>
+                    <strong>Cuisine:&nbsp; </strong>
                     {item.recipe.cuisineType}
-                  </li>
+               
                   <li className="btn">
                     <a href={item.recipe.url} target="_blank">
                       See More
