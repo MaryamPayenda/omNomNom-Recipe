@@ -10,7 +10,6 @@ const Home = () => {
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState();
   const [pagination, setPagination] = useState(0);
-  const [rPramater, setRPramater] = useState();
 
   // useref
   const prevSearchIdRef = useRef();
