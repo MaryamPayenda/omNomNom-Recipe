@@ -106,7 +106,6 @@ const Home = () => {
             <RiArrowDropRightLine />
           </i>
           <div className="mobileArrows">
-            {" "}
             <i onClick={prevClick} className="mobilePrev">
               <RiArrowDropLeftLine />
             </i>
