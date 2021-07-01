@@ -26,7 +26,8 @@ function Dishes({ id, title }) {
                   <img className="image" src={item.recipe.image} />
                   <li key={item.recipe.label}>{item.recipe.label}</li>
                   <li key={item.recipe.calories}>
-                    Calories :{item.recipe.calories}
+                    <strong>Calories : </strong>
+                    {item.recipe.calories}
                   </li>
                   <li key={item.recipe.cuisineType}>
                     {" "}
