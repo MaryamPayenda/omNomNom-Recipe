@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import meat_img from "../img/catogories11.jpg";
-import vegetarian_img from "../img/catogories2.jpg";
-import vegan_img from "../img/catogories3.jpg";
+import vegetarian_img from "../img/catogories22.jpg";
+import vegan_img from "../img/catogories33.jpg";
 
 function Categories() {
   return (
+
     <div>
-      {" "}
+   
       <h2>Our favorite Categories</h2>
       <div className="categories">
         <Link to="/Dishes/meat">
@@ -29,6 +30,7 @@ function Categories() {
           </div>
         </Link>
       </div>
+
     </div>
   );
 }

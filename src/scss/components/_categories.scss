@@ -1,84 +1,87 @@
 .categories {
-  @include flex-row;
-  margin: auto;
-  // border: 2px green dotted;
-  // background-color: $onn5;
+  margin: 5% auto;
+
   display: flex;
   justify-content: space-around;
   align-items: center;
-
-  width: 80vw;
+  height: 90%;
+  width: 95%;
 }
 .meat {
+
   @include flex-box;
-  background-color: $onn3;
+
   flex-direction: column;
   width: 22rem;
+  height: 17rem;
 }
 #meat_img {
-  width: 20vw;
-  height: 10vw;
-}
 
+  width: 110%;
+}
 .vegetarian {
+ 
   @include flex-box;
-  background-color: $onn2;
 
   flex-direction: column;
-
   width: 22rem;
+  height: 17rem;
 }
-#vegetarian_img {
-  width: 20vw;
-  height: 10vw;
+#vegetairian_img {
+
+  width: 110%;
 }
 .vegan {
+ 
   @include flex-box;
-  background-color: $onn1;
-
+ 
   flex-direction: column;
   width: 22rem;
+  height: 17rem;
 }
 #vegan_img {
-  width: 20vw;
-  height: 10vw;
+  
+  width: 110%;
 }
-// mobile
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
   .categories {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+
     flex-direction: column;
   }
   .meat {
-    border: 2px firebrick dashed;
+  
     @include flex-box;
     flex-direction: column;
-
     width: 100%;
     height: 100%;
   }
   #meat_img {
-    border: 1px gray solid;
-    height: 12.5rem;
-    width: 22rem;
+ 
+    height: 86%;
+    width: 75%;
   }
-
   .vegetarian {
-    border: 2px wheat dashed;
+ 
     @include flex-box;
     flex-direction: column;
-
     width: 100%;
     height: 100%;
+  }
+  #vegetairian_img {
+    height: 86%;
+    width: 75%;
   }
   .vegan {
-    border: 2px fuchsia dashed;
+ 
     @include flex-box;
     flex-direction: column;
     width: 100%;
     height: 100%;
-    margin-bottom: 5rem;
+  
+  }
+  #vegan_img {
+    height: 86%;
+    width: 75%;
   }
 }
