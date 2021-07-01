@@ -85,7 +85,7 @@ const Home = () => {
         <div className="container">
           {/* {pagination}      */}
 
-          <i onClick={prevClick}>
+          <i onClick={prevClick} className="prev">
             <RiArrowDropLeftLine />
           </i>
           <div className="singleRecipe">
@@ -103,10 +103,18 @@ const Home = () => {
               />
             ))}
           </div>
-
-          <i onClick={nextClick}>
+          <i onClick={nextClick} className="next">
             <RiArrowDropRightLine />
           </i>
+          <div className="mobileArrows">
+            {" "}
+            <i onClick={prevClick} className="mobilePrev">
+              <RiArrowDropLeftLine />
+            </i>
+            <i onClick={nextClick} className="mobileNext">
+              <RiArrowDropRightLine />
+            </i>
+          </div>
         </div>
       </div>
     </React.Fragment>
