@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { RiArrowDropRightLine, RiArrowDropLeftLine } from "react-icons/ri";
 
 function Dishes({ id, title }) {
   const [dishes, setDishes] = useState([]);
   const APP_ID = "271b281a";
   const APP_KEY = "88c627abf78667444cf4d804190f1b2c";
+
   const url = `
-    https://api.edamam.com/search?q=${id}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=6
+    https://api.edamam.com/search?q=${id}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=63
       `;
   useEffect(() => {
     fetch(url)
