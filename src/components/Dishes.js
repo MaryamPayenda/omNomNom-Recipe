@@ -33,14 +33,14 @@ function Dishes({ id, title }) {
                     Calories:&nbsp;{Math.floor(item.recipe.calories)}kcal
                   </li>
 
-                  <li key={item.recipe.cuisineType}>
+                  {/* <li key={item.recipe.cuisineType}>
                     {" "}
                     <strong>Cuisine:&nbsp; </strong>
                     {item.recipe.cuisineType}
-                  </li>
+                  </li> */}
                   <li className="btn">
                     <a href={item.recipe.url} target="_blank">
-                      More about this Food
+                      More about this dish
                     </a>
                   </li>
                 </div>
